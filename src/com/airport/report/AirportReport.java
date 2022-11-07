@@ -117,11 +117,9 @@ public class AirportReport {
 			List<Runway> runwayList) {
 		int counter = 0;
 		List<AirportsDTO> fileteredAirports = new ArrayList<>();
-
 		List<Airports> airportsList = getAirportDetails(airportFile, runwayList);
 		List<Countries> countriesList = getCountriesDetails(countriesFile, airportsList);
 		for (Countries c : countriesList) {
-//			if (c.getCode().equals("TZ")) {
 			for (Airports a : airportsList) {
 				if (c.getCode().equals(a.getCountry())) {
 
@@ -129,11 +127,19 @@ public class AirportReport {
 
 				}
 			}
-//			}
-//			}
 		}
 
 		return fileteredAirports;
+	}
+
+	public Map<String, Long> getCountriesWithNumberAirports(String airportFile, String countriesFile,
+			List<Runway> runwayList) {
+		List<AirportsDTO> fileteredAirports = countriesWithHeighestNumberOfAirports(airportFile, countriesFile,
+				runwayList);
+		Map<String, Long> airportMap = fileteredAirports.stream()
+				.collect(Collectors.groupingBy(x -> x.getCountryName(), Collectors.counting()));
+
+		return airportMap;
 	}
 
 }
