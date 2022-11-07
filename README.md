@@ -5,7 +5,7 @@
 
 Step 1 : Enter the country code when the app starts.
 
-Step 2 : All airport's runways related to the given input (e.g. country) will pop-up in the output.
+OUTPUT - > Runways List for each airport will be retrieved 
 
 ### Assessment Part 2 
 
