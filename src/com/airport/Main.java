@@ -52,10 +52,10 @@ public class Main {
 				"resources/airports.csv");
 		airportsList.stream().forEach(System.out::println);
 
-		System.out.println("Top 10 countries with the highest number of airports");
-		List<AirportsDTO> countriesWithHigherNrAirports = airportReport
-				.countriesWithHeighestNumberOfAirports("resources/airports.csv", "resources/countries.csv", runwayList);
-		countriesWithHigherNrAirports.stream().forEach(System.out::println);
+		System.out.println("Top 10 countries with the highest number of airports (IN PROGRESS)");
+//		List<AirportsDTO> countriesWithHigherNrAirports = airportReport
+//				.countriesWithHeighestNumberOfAirports("resources/airports.csv", "resources/countries.csv", runwayList);
+//		countriesWithHigherNrAirports.stream().forEach(System.out::println);
 
 
 	}
