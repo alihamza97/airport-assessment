@@ -42,7 +42,7 @@ public class Main {
 		int counter = 0;
 		for (Entry<String, Long> m : linkedListAirports.entrySet()) {
 			counter++;
-			System.out.println(m);
+			System.out.println(m.getKey());
 			if (counter >= 10) {
 				break;
 			}
