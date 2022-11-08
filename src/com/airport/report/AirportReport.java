@@ -100,7 +100,7 @@ public class AirportReport {
 		List<Airports> browseList = getAirportDetails(airportFile, runwayDataList);
 		for (Airports a : browseList) {
 			if (countryCode.equals(a.getCountry())) {
-				for (Runway r : runwayDataList) {
+				for (Runway r : a.getRunwayList()) {
 					if (a.getId().equals(r.getAirportRef())) {
 						filteredRunway.add(new RunwayDTO(a.getId(), r.getAirportRef(), r.getAirportIdent(),
 								r.getLengthFt(), r.getWidthFt(), r.getSurface(), a.getCountry(), a.getName()));
@@ -119,7 +119,7 @@ public class AirportReport {
 		List<Airports> airportsList = getAirportDetails(airportFile, runwayList);
 		List<Countries> countriesList = getCountriesDetails(countriesFile, airportsList);
 		for (Countries c : countriesList) {
-			for (Airports a : airportsList) {
+			for (Airports a : c.getAirports()) {
 				if (c.getCode().equals(a.getCountry())) {
 
 					fileteredAirports.add(new AirportsDTO(c.getName(), a.getName()));
