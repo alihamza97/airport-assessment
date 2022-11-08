@@ -115,7 +115,6 @@ public class AirportReport {
 
 	public List<AirportsDTO> countriesWithHeighestNumberOfAirports(String airportFile, String countriesFile,
 			List<Runway> runwayList) {
-		int counter = 0;
 		List<AirportsDTO> fileteredAirports = new ArrayList<>();
 		List<Airports> airportsList = getAirportDetails(airportFile, runwayList);
 		List<Countries> countriesList = getCountriesDetails(countriesFile, airportsList);
@@ -123,7 +122,7 @@ public class AirportReport {
 			for (Airports a : airportsList) {
 				if (c.getCode().equals(a.getCountry())) {
 
-					fileteredAirports.add(new AirportsDTO(c.getName(), a.getName(), counter));
+					fileteredAirports.add(new AirportsDTO(c.getName(), a.getName()));
 
 				}
 			}
