@@ -3,7 +3,8 @@
 ### Assessment Part 1
 
 
-Step 1 : Enter the country code when the app starts.
+Step 1 : Enter the country code when the app starts in the following format:
+e.g. US
 
 OUTPUT - > Runways List for each airport will be retrieved 
 
