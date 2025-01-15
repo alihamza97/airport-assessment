@@ -4,7 +4,7 @@
 
 
 Step 1 : Enter the country code when the app starts in the following format:
-e.g. US
+e.g. US (refer to the CSVs in the resources folder).
 
 OUTPUT - > Runways List for each airport will be retrieved 
 
